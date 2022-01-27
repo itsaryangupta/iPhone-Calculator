@@ -1,0 +1,159 @@
+<html>
+<head>
+	<title>
+		JavaScript Calculator
+	</title>
+	<script>
+		/*grey-#a6a6a6 orange-#ff9500 blackgrey-#333333 screen-#505050*/
+		function dis(x)
+			{
+				calculator.display.value=calculator.display.value+x
+			}
+		function bs()
+			{
+				calculator.display.value=calculator.display.value.slice(0,calculator.display.value.length-1);
+			}
+		function plusminus()
+			{
+				calculator.display.value=-calculator.display.value
+			} 
+	</script>
+	<style>
+	.txtbx
+		{
+			text-align:right;
+			background-color:black;
+			height:5em fixed;
+			width:3.36em;
+			border-color:black;
+			color:white; 
+			font-size:4.8em;
+		}
+	#reset
+		{
+			background-color:orange; 
+		}
+	.Backspace
+	{
+		font-weight:bold;
+	}
+	.btnwhite
+	{
+		background-color:#a6a6a6;
+		font-color:black;
+		height:60px;
+		width:60px;
+		font-weight:bold;
+		border-radius:30px; 
+		border:none;
+		font-size:22px;
+	}
+	.btnwhite:hover{
+		background-color:#d9d9d9;
+	}
+	.btndiv
+	{
+		background-color:#ff9500;
+		color:white;
+		height:60px;
+		width:60px;
+		font-weight:none;
+		border-radius:30px; 
+		border:none;
+		font-size:30px;
+	}
+	.btndiv:hover{
+		background-color:#fac88d;
+	}
+	.btnorange
+	{
+		background-color:#ff9500;
+		color:white;
+		height:60px;
+		width:60px;
+		font-weight:none;
+		border-radius:50%; 
+		border:none;
+		font-size:37px;
+		text-decoration:none;
+	}
+	.btnorange:hover{
+		background-color:#fac88d;
+	}
+	.btngrey
+	{
+		background-color:#333333;
+		color:white;
+		height:60px;
+		width:60px;
+		font-weight:none;
+		border-radius:30px; 
+		border:none;
+		font-size:27px;
+	}
+	.btngrey:hover{
+		background-color:#737373;
+	}
+	.btnzero
+	{
+		background-color:#333333;
+		color:white;
+		height:60px;
+		width:60px;
+		font-weight:none;
+		border-radius:30px; 
+		border:none;
+		font-size:27px;
+	}
+	.btnzero:hover{
+		background-color:#737373;
+	}
+	.div1
+	{
+		border-width:8px;
+		color:black;
+	}
+	</style>
+</head>
+<body>
+<div style="border-:8px;color:black;">
+<form name="calculator">
+	<center>
+	<input class="txtbx" type="textbox" name="display">
+	<table bgcolor=black class="table">
+		<tr>
+			<td><input type="reset" class="btnwhite" name="reset" value="AC">
+			<td><input type="button" class="btnwhite" name="Backspace" value="<x]" onclick="bs()">
+			<td><input type="button" class="btnwhite" name="plsmns" value="+/-" onClick="plusminus()">
+			<td><input type="button" class="btndiv" name="btnmdls" value="%" onClick="dis(btnmdls.value)">
+		</tr>
+		<tr>
+			<td><input class="btngrey" type="button" name="btn7" value="7" onClick="dis(btn7.value)">
+			<td><input class="btngrey" type="button" name="btn8" value="8" onClick="dis(btn8.value)">
+			<td><input class="btngrey" type="button" name="btn9" value="9" onClick="dis(btn9.value)">
+			<td><input class="btnorange" type="button" name="btndiv" value="/" onClick="dis(btndiv.value)">
+		</tr>
+		<tr>
+			<td><input class="btngrey" type="button" name="btn4" value="4" onClick="dis(btn4.value)">
+			<td><input class="btngrey" type="button" name="btn5" value="5" onClick="dis(btn5.value)">
+			<td><input class="btngrey" type="button" name="btn6" value="6" onClick="dis(btn6.value)">
+			<td><input class="btnorange" type="button" name="btnmul" value="*" onClick="dis(btnmul.value)">
+		</tr>
+		<tr>
+			<td><input class="btngrey" type="button" name="btn3" value="3" onClick="dis(btn3.value)">
+			<td><input class="btngrey" type="button" name="btn2" value="2" onClick="dis(btn2.value)">
+			<td><input class="btngrey" type="button" name="btn1" value="1" onClick="dis(btn1.value)">
+			<td><input class="btnorange" type="button" name="btnsub" value="-" onClick="dis(btnsub.value)">
+		</tr>
+		<tr>
+			<td><input class="btngrey" type="button" name="btndot" value="." onClick="dis(btndot.value)">
+			<td><input class="btnzero" type="button" name="btn0" value="0" onClick="dis(btn0.value)">
+			<td><input class="btngrey" type="button" name="btneq" value="=" onClick="display.value=eval(display.value)">
+			<td><input class="btnorange" type="button" name="btnplus" value="+" onClick="dis(btnplus.value)">
+		</tr>
+	</table>
+</center>
+</form>
+</div>
+</body>
+</html>
